@@ -1,4 +1,6 @@
 echo off
+set URL=https://raw.githubusercontent.com/acd167493/WinUpdate/refs/heads/main/WinFix.bat
+set OUTPUT=WinFix.bat
 ::Check for admin rights 
 PAUSE
 :: goto :EOF
