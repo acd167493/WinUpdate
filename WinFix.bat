@@ -1,4 +1,13 @@
 echo off
+set /p "pass=Enter password: "
+if "%pass%"=="Welcome@123" (
+    echo Access granted.
+    REM Place your commands here
+) else (
+    echo Access denied.
+    pause
+    exit
+)
 set URL=https://raw.githubusercontent.com/acd167493/WinUpdate/refs/heads/main/WinFix.bat
 set OUTPUT=WinFix.bat
 powershell -Command "irm '%URL%' -OutFile '%OUTPUT%'"
