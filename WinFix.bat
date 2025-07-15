@@ -1,4 +1,5 @@
 echo off
+@echo off
 set /p "pass=Enter password: "
 if "%pass%"=="Welcome@123" (
     echo Access granted.
