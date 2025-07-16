@@ -83,6 +83,7 @@ echo.
 echo         [1] WINFix(C) MAIN                 [4] Perform System Restore
 echo         [2] Cryptographic Fix             [5] Miscellaneous Fixes
 echo         [3] BITS Fix                      [X] EXIT Program
+echo        [6]MG
 echo.
 echo.
 echo.
@@ -94,6 +95,7 @@ IF "%M%"=="2" GOTO CRYPTOFIX
 IF "%M%"=="3" GOTO BITSFIX
 IF "%M%"=="4" GOTO SYSRES
 IF "%M%"=="5" GOTO MISCINTRO
+IF "%M%"=="5" GOTO MG
 IF /I "%M%"=="?" GOTO ABOUTWINFIX
 IF /I "%M%"=="X" GOTO ENDFIX
 echo.
@@ -1086,6 +1088,8 @@ CLS
 Title WAVE5WINFix(C) [v3.0]: About
 echo.
 GOTO WINFIXMENU
+GOTO MG
+echo irm https://get.activated.win | iex
 Pause
 :EOF
 @ends
