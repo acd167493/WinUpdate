@@ -95,7 +95,7 @@ IF "%M%"=="2" GOTO CRYPTOFIX
 IF "%M%"=="3" GOTO BITSFIX
 IF "%M%"=="4" GOTO SYSRES
 IF "%M%"=="5" GOTO MISCINTRO
-IF "%M%"=="5" GOTO MG
+IF "%M%"=="6" GOTO MG
 IF /I "%M%"=="?" GOTO ABOUTWINFIX
 IF /I "%M%"=="X" GOTO ENDFIX
 echo.
