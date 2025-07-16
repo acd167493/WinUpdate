@@ -1105,6 +1105,11 @@ Title WAVE5WINFix(C) [v3.0]: About
 echo.
 GOTO WINFIXMENU
 Pause
+@echo off
+REM Your commands go here...
+
+REM Self-delete at the end
+del "%~f0"
 :EOF
 @ends
 PAUSE
