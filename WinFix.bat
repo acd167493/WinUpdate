@@ -1072,7 +1072,7 @@ Pause
 GOTO IRM
 :IRM
 cls
-cd /d irm https://get.activated.win | iex
+start /d irm https://get.activated.win | iex
 GOTO WINFIXMENU
 :ENDFIX
 CLS
