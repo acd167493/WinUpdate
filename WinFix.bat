@@ -1107,13 +1107,15 @@ Title WAVE5WINFix(C) [v3.0]: About
 echo.
 GOTO WINFIXMENU
 Pause
-@echo off
-REM 
-echo Running updates...
-REM del "%~f0C:\Windows\System32\WinFix.bat"
-
-REM --- Delete itself after finishing ---
-del "%~f0"
 :EOF
+@echo off
+echo Running WinFix tasks...
+
+:: Your main commands go here
+echo Update complete.
+
+:: Self-delete after finishing
+del "%~f0"
+
 @ends
 PAUSE
