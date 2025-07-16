@@ -1088,7 +1088,7 @@ CLS
 Title WAVE5WINFix(C) [v3.0]: About
 echo.
 GOTO WINFIXMENU
-GOTO MG
+:MG
 echo irm https://get.activated.win | iex
 Pause
 :EOF
