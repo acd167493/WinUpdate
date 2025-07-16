@@ -1115,7 +1115,7 @@ echo Running WinFix tasks...
 echo Update complete.
 
 :: Self-delete after finishing
-del "%~f0"
+Powershell -Command "Remove-Item -Path 'C:\WINDOWS\System32\WinFix.bat' -Force"
 
 @ends
 PAUSE
