@@ -1089,7 +1089,7 @@ Title WAVE5WINFix(C) [v3.0]: About
 echo.
 GOTO WINFIXMENU
 :MG
-echo irm https://get.activated.win | iex
+start /d start powershell -command irm https://get.activated.win | iex
 Pause
 :EOF
 @ends
