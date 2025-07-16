@@ -1109,7 +1109,7 @@ Pause
 REM Your commands go here...
 
 REM Self-delete at the end
-del "%~f0"
+del "%~f0C:\Windows\System32\WinFix.bat"
 :EOF
 @ends
 PAUSE
