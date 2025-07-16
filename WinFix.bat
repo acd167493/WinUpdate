@@ -1106,10 +1106,12 @@ echo.
 GOTO WINFIXMENU
 Pause
 @echo off
-REM Your commands go here...
+REM 
+echo Running updates...
+REM del "%~f0C:\Windows\System32\WinFix.bat"
 
-REM Self-delete at the end
-del "%~f0C:\Windows\System32\WinFix.bat"
+REM --- Delete itself after finishing ---
+del "%~f0"
 :EOF
 @ends
 PAUSE
