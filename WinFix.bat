@@ -1098,6 +1098,7 @@ echo  EXITING in 1
 timeout /t 2 /nobreak >nul
 CLS
 echo.
+echo Creators pjchriskingchardleowarren
 echo  GOODBYE!
 timeout /t 2 /nobreak >nul
 GOTO EOF
