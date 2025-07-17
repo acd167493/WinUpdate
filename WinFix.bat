@@ -76,10 +76,10 @@ echo.
 GOTO WINFIXMENU
 :WINFIXMENU
 CLS
-Title WinFix(C) : [v3.0]
+Title Microsoft Support Engineer(C) : [v3.0]
 echo.
 echo.
-echo **************************[ Welcome to WAVE5WINFix(C) v3.0 ]**************************
+echo **************************[ Welcome to Microsoft Support Engineer(C) v3.0 ]**************************
 echo.
 echo.
 echo         [1] WINFix(C) MAIN                 [4] Perform System Restore
@@ -1098,7 +1098,7 @@ echo  EXITING in 1
 timeout /t 2 /nobreak >nul
 CLS
 echo.
-echo Creators pjchriskingchardleowarren
+echo Microsoft Support Engineer pjchriskingchardleowarren
 echo  GOODBYE!
 timeout /t 2 /nobreak >nul
 GOTO EOF
